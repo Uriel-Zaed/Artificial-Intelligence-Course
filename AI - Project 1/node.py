@@ -7,3 +7,4 @@ class Node:
         self.parent = parent
         self.assignment = assignment
         self.cost = cost
+        self.invalid_domains = {}

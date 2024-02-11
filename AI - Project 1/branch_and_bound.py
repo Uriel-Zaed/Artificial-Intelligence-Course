@@ -17,12 +17,12 @@ class BranchAndBound:
             current_node = queue.pop(0)
             current_assignmets = self.get_assignments(current_node)
             
-            for d in self.problem.Domain:
-                if current_node.varID == 'root':
+            if current_node.varID == 'root':
                     child_varID = order[0]
-                else:
-                    index_order = order.index(current_node.varID)
-                    child_varID = order[index_order + 1] # next var id
+            else:
+                index_order = order.index(current_node.varID)
+                child_varID = order[index_order + 1] # next var id
+            for d in self.problem.Domain:
                 child_cost = current_node.cost + self.problem.get_child_cost(child_varID, d, current_assignmets)
                 if child_cost >= self.UB: # Pruning
                     continue

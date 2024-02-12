@@ -62,7 +62,7 @@ for row_idx, row_data in enumerate(graphs[0.4], start=1):
         ws.cell(row=row_idx, column=col_idx, value=cell_data)
 
 # Save the workbook
-wb.save("data 0.4.xlsx")
+wb.save(f"data p1=0.4_N={N}_D={D}.xlsx")
 
 # Create a workbook and select the active worksheet
 wb = Workbook()
@@ -74,7 +74,7 @@ for row_idx, row_data in enumerate(graphs[0.7], start=1):
         ws.cell(row=row_idx, column=col_idx, value=cell_data)
 
 # Save the workbook
-wb.save("data 0.7.xlsx")
+wb.save(f"data p1=0.7_N={N}_D={D}.xlsx")
         
 for p_1 in graphs:
     plt.plot(graphs[p_1][0], graphs[p_1][1], 'o-', label='bnb')
@@ -83,6 +83,6 @@ for p_1 in graphs:
     plt.legend()
     plt.xlabel("p2")
     plt.ylabel("averege CC")
-    plt.title(f"B&B p1 = {p_1}")
-    plt.savefig(f'p1 = {p_1}.png')
+    plt.title(f"B&B - p1 = {p_1}")
+    plt.savefig(f'p1={p_1}_N={N}_D={D}.png')
     plt.show()

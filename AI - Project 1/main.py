@@ -7,8 +7,8 @@ from branch_and_bound_hur import BranchAndBound_Hur
 import matplotlib.pyplot as plt
 from openpyxl import Workbook
 
-N = 10
-D = 10
+N = 8
+D = 8
 num_of_problems = 10
 p1 = [0.4, 0.7]
 p2 = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]
@@ -82,6 +82,7 @@ for p_1 in graphs:
     plt.plot(graphs[p_1][0], graphs[p_1][3], 'o-', label='bnb_hur')
     plt.legend()
     plt.xlabel("p2")
-    plt.ylabel("CC")
+    plt.ylabel("averege CC")
     plt.title(f"B&B p1 = {p_1}")
+    plt.savefig(f'p1 = {p_1}.png')
     plt.show()

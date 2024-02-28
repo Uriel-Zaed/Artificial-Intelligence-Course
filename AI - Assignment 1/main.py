@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from openpyxl import Workbook
 
 N = 8
-D = 8
+D = 5
 num_of_problems = 10
 p1 = [0.4, 0.7]
 p2 = [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]

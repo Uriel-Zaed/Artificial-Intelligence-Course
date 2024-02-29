@@ -11,7 +11,9 @@ class State():
                     print(" ,", end = ' ')
                 else:
                     print(str(j)+",", end = ' ')
-            print()
+            print("")
+        print("")
+        
 
     def __eq__(self, __value) -> bool:
         return self.board == __value.board

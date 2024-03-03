@@ -1,7 +1,7 @@
 import random 
 from state import State
 
-def initial_states(num_of_problems,N):
+def generate_initial_states(num_of_problems,N):
     inital_states = []  
     for p in range(num_of_problems):
         board = get_solvable_board(N)
@@ -9,7 +9,7 @@ def initial_states(num_of_problems,N):
         inital_states.append(State(board))
     return inital_states
     
-def goal_state(N):
+def generate_goal_state(N):
     goal_board_1d = [i for i in range(1,9)]
     goal_board_1d.append(0)
     goal_board = dArr_to_2dArr(goal_board_1d,N)

@@ -1,1 +1,1 @@
-# Uriel-Ran-Projects
+# Artificial-Intelligence Course

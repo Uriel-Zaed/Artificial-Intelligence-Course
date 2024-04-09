@@ -13,8 +13,8 @@ initial_states = generate_initial_states(num_of_problems,N)
 
 w_p = 2 # print solotion
 
-# w_s = [1,2]
-w_s = [1,1.5,2,2.5,3,3.5,4]
+w_s = [1,2] 
+# w_s = [1,1.5,2,2.5,3,3.5,4]
 
 moves_man = {w:0 for w in w_s} # dict key=w, value=moves
 moves_mis = {w:0 for w in w_s} # dict key=w, value=moves
